@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/1.9/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
+#admin :mkalex Zntarctica1996,. 
+
 
 import os
 
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -55,7 +58,9 @@ ROOT_URLCONF = 'mkalex.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+        'blog/template',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
