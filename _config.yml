@@ -1,3 +1,9 @@
 # # # # # # # # # # # # #
 #   M i k i - A l e x   #
 # # # # # # # # # # # # #
+
+
+# Sass
+sass:
+  sass_dir:         _sass
+  style:            :compressed
