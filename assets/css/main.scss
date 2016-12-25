@@ -1,8 +1,8 @@
 ---
 ---
 
-@import 'nav.scss';
+@import 'layout.scss';
+@import 'base.scss';
 
-.t{
-    color:#000;
-}
+@import 'nav.scss';
+@import 'title.scss';

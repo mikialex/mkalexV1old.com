@@ -2,8 +2,62 @@
 #   M i k i - A l e x   #
 # # # # # # # # # # # # #
 
+# Basic
+name:               "mkalex"
+
+
+
+author:
+  name:             miki alex
+  # facebook:         your-id
+  # twitter:          your-id
+  # github:           mikialex
+  # linkedin:         your-id
+  # medium:           your-id
+  # tumblr:           your-id
+  email:            18516340862@163.com
+
+# Google-analytics
+google-analytics:
+  id:               "UA-86106436-1"
+
+# URL
+url:               "http://www.mkalex.com"
+baseurl:            ""
+
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:           Asia/Shanghai
+permalink:          /:year-:month-:day/:title/
+
+# Pagination
+paginate:           10
+paginate_path:      /page:num/
+
+# Markdown
+markdown:           kramdown
+kramdown:
+  imput:            GFM
+
+# Navigation
+nav:
+  - name:           "Blog"
+    url:            "/blog"
+  - name:           "Portfolio"
+    url:            "/portfolio"
+  - name:           "Archive"
+    url:            "/archive"
+  - name:           "Opensource"
+    url:            "/opensource"
+  - name:           "About"
+    url:            "/about"
+
 
 # Sass
 sass:
   sass_dir:         _sass
-  style:            :compressed
+  # style:            :compressed
+
+  gems:
+  # - jekyll-seo-tag
+  - jekyll-paginate

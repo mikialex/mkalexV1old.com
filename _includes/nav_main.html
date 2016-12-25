@@ -1,0 +1,16 @@
+<div class="mk-container">
+    <nav class="mk-nav-main">
+        <ul>
+            {% for nav in site.nav %}
+            {% if nav.url contains 'http://' or nav.url contains 'https://' %}
+            <li><a href="{{ nav.url }}">{{ nav.name }}</a></li>
+            {% else %}
+            <li><a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        <div>
+            <h2>格藝尋道 術設溯淵</h2>
+        </div>
+    </nav>
+</div>
