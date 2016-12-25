@@ -12,9 +12,12 @@ html {
 
 
 .mk-container{
-    width: rem(1024px);
+    width: rem(1000px);
     margin: auto;
     display: flex;
+    @media (max-width: $desktop-min-width) {
+        width:95%;
+    }
 }
 
 //测试块
