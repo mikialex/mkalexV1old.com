@@ -4,6 +4,7 @@
     background-color: #000;
     font-weight: 100;
     color:#848484;
+    margin-top: rem(100px);
     >div{
         max-width:rem(1200px);
         margin:auto;
@@ -23,10 +24,19 @@
                 @extend .cd-8;
                 justify-content: center;
                 >li{
-                    height: 50px;
                     flex-grow: 1;
-                    display: flex;
-                    justify-content: center;
+                    >a{
+                        text-decoration: none;
+                        color:#848484;
+                        height: 50px;
+                        flex-grow: 1;
+                        display: flex;
+                        justify-content: center;
+                        transition: 0.3s ease-out;
+                        &:hover{
+                            color:#fff;
+                        }
+                    }
                 }
             }
         }
@@ -70,13 +80,23 @@
                 margin-top: 10px;
             }
             >.mk-footer-copyright{
+                transition: 0.3s ease-out;
                 margin-top: 25px;
+                &:hover{
+                    color:#fff;
+                }
+                cursor: pointer;
                 >span{
                     font-family: bigCaslon;
                 }
             }
             >.mk-footer-beian{
+                transition: 0.3s ease-out;
                 margin-top: 5px;
+                &:hover{
+                    color:#fff;
+                }
+                cursor: pointer;
             }
         }
     }

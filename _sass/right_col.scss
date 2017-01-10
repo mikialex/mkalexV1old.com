@@ -20,8 +20,8 @@
                 flex-direction: column;
                 height:rem(70px);
                 >h4{
-                    font-weight: 300;
-                    font-size: rem(20px);
+                    font-weight: 100;
+                    font-size: rem(24px);
                     color:rgb(130, 130, 130);
                     margin:0px;
                     line-height: rem(70px);
@@ -49,11 +49,72 @@
                     background-color: $line-dark;
                 }
             }
-            >ul{
-                margin: 0px;
-                list-style: none;
-            }
         }
 
+    }
+}
+.right-col-ul-collection{
+    margin: 0px;
+    padding-left:rem(10px);
+    list-style: none;
+
+    >li{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        >a{
+            text-decoration: none;
+            color:rgb(0, 0, 0);
+            font-weight: 100;
+            font-size: rem(20px);
+            background-color: $page-background;
+            transition: 0.3s ease-out;
+            &:hover{
+                background-color: #000;
+                padding-left: 15px;
+                padding-right: 5px;
+                border-radius: rem(30px);
+                color:#fff;
+            }
+        }
+        >span{
+            float: right;
+            background-color: $page-background;
+            color:$line-dark;
+            font-weight: 300;
+            font-size: rem(14px);
+            line-height:rem(28px);
+        }
+        &::after{
+            position: relative;
+            display: block;
+            float:right;
+            content: ' ';
+            border-bottom: dashed 1px rgb(223, 223, 223);
+            width:100%;
+            top:rem(-14px);
+            z-index: -1;
+        }
+    }
+}
+
+.right-col-ul-prom{
+    margin: 0px;
+    padding-left:rem(10px);
+    list-style: none;
+    >li{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.3s ease-out;
+        &:hover{
+            background-color: #ededed;
+            padding-left: 15px;
+            padding-right: 5px;
+        }
+        >a{
+            transition: 0.3s ease-out;
+            text-decoration: none;
+            font-weight: 200;
+            color:#373737;
+        }
     }
 }
