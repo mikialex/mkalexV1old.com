@@ -33,13 +33,20 @@
         >.mk-footer-left{
             position: relative;
             top:-5px;
+            @media (max-width:500px ) {
+                left:rem(30px);
+            }
         }
         >.mk-footer-right{
             position: relative;
             top:-5px;
+            @media (max-width:500px ) {
+                right:rem(30px);
+            }
         }
         >.mk-footer-center{
             flex-direction: column;
+            flex-shrink: 1;
             >.mk-footer-design-note{
                 font-family: bigCaslon;
                 color: #fff;
