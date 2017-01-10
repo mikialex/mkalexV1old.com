@@ -42,19 +42,21 @@
     }
     >div{
         display: flex;
-        >h2{
-            margin:0px;
-            font-size: rem(32px);
-            border-bottom:$line-border;
-            height:rem(60px);
-            line-height:rem(60px);
-            text-align: right;
-            width:400px;
+        >div{
+            >embed{
+                margin:0px;
+                font-size: rem(32px);
+                border-bottom:$line-border;
+                height:rem(60px);
+                line-height:rem(60px);
+                text-align: right;
+                width:300px;
+            }
             &::after{
                 position: relative;
                 display: block;
                 float:right;
-                margin-top:rem(57px);
+                margin-top:rem(56px);
                 content: ' ';
                 @extend .mk-small-dot;
             }

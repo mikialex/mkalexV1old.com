@@ -68,7 +68,8 @@ html {
 	min-height:1px;
     }
 }
-@for $i from 1 through 12{
+
+@for $i from 1 through 16{
     .cd-#{$i}{
         @media (max-width:$i*$media-unit ) {
           flex-direction: column;
@@ -77,6 +78,14 @@ html {
               width:100%;
           }
           width:100%;
+        }
+    }
+}
+
+@for $i from 1 through 16{
+    .inv-#{$i}{
+        @media (max-width:$i*$media-unit ) {
+            display: none !important;
         }
     }
 }
