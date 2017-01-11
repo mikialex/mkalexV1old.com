@@ -27,6 +27,7 @@
                     flex-grow: 1;
                     >a{
                         text-decoration: none;
+                        white-space:nowrap;
                         color:#848484;
                         height: 50px;
                         flex-grow: 1;
@@ -59,10 +60,11 @@
             flex-shrink: 1;
             >.mk-footer-design-note{
                 font-family: bigCaslon;
+                font-size: rem(16px);
                 color: #fff;
-                font-size: 20px;
                 height:50px;
                 line-height: 50px;
+                white-space:nowrap;
             }
             >div{
                 width:100%;
@@ -81,6 +83,8 @@
             }
             >.mk-footer-copyright{
                 transition: 0.3s ease-out;
+                font-size: rem(14px);
+                text-align: center;
                 margin-top: 25px;
                 &:hover{
                     color:#fff;
@@ -92,6 +96,7 @@
             }
             >.mk-footer-beian{
                 transition: 0.3s ease-out;
+                font-size: rem(14px);
                 margin-top: 5px;
                 &:hover{
                     color:#fff;

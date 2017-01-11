@@ -41,6 +41,8 @@ kramdown:
 
 # Navigation
 nav:
+  - name:           "Home"
+    url:            "/"
   - name:           "Blog"
     url:            "/blog"
   - name:           "Portfolio"

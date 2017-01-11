@@ -41,12 +41,14 @@
                 flex-direction: row-reverse;
             }
             >h1{
-                display: block;
+                display: inline-block;
                 font-size: rem(48px);
                 font-weight: 100;
                 padding-left: 10px;
-                max-width:rem(200px);
+                padding-right: 10px;
+                max-width:rem(500px);
                 background-color: $page-background;
+                white-space: nowrap;
                 @media (max-width:700px ) {
                     margin-right: 20px;
                 }
@@ -72,6 +74,19 @@
         align-items: center;
         @media (max-width:700px ) {
             display: none;
+        }
+        >div{
+            width:rem(150px);
+            height:rem(150px);
+            border-radius: rem(75px);
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >embed{
+                width:rem(100px);
+                height:rem(100px);
+            }
         }
     }
 }
