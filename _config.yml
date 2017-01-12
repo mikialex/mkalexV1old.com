@@ -9,12 +9,6 @@ name:               "mkalex"
 
 author:
   name:             miki alex
-  # facebook:         your-id
-  # twitter:          your-id
-  # github:           mikialex
-  # linkedin:         your-id
-  # medium:           your-id
-  # tumblr:           your-id
   email:            18516340862@163.com
 
 # Google-analytics
@@ -31,8 +25,8 @@ timezone:           Asia/Shanghai
 permalink:          /:year-:month-:day/:title/
 
 # Pagination
-paginate:           10
-paginate_path:      /page:num/
+paginate:           7
+paginate_path:   "blog/page:num"
 
 # Markdown
 markdown:           kramdown
@@ -60,4 +54,7 @@ sass:
   sass_dir:         _sass
   # style:            :compressed
 
-gems: [jekyll-paginate]
+# gems: [jekyll-paginate]
+gems:
+  - jekyll-seo-tag
+  - jekyll-paginate

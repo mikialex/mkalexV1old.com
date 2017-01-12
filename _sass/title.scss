@@ -51,6 +51,8 @@
                 white-space: nowrap;
                 @media (max-width:700px ) {
                     margin-right: 20px;
+                    white-space: normal;
+                    z-index: -1;
                 }
             }
             &::after{
