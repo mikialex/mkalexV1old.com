@@ -4,3 +4,8 @@ Gemfile.lock
 .jsbeautifyrc
 site.zip
 _posts
+*.pyc
+
+mkalex/mkalex/settings.py
+
+ENV3.6
