@@ -1,9 +1,11 @@
-_site
-.sass-cache
-Gemfile.lock
+staticDev/_site
+staticDev/.sass-cache
+staticDev/Gemfile.lock
+staticDev/_posts
+
+
 .jsbeautifyrc
-site.zip
-_posts
+
 *.pyc
 
 mkalex/mkalex/settings.py

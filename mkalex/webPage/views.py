@@ -8,6 +8,6 @@ from .models import Article
 
 def index(request):
     template=loader.get_template('webPage/index.html')
-    art=Article.objects.get(pk=1)
+    art=get_object_or_404(Article,pk=1)
     content ={'name':art.title}
     return HttpResponse(template.render(content))
