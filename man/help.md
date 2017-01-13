@@ -12,14 +12,14 @@
 环境配置
 
 #安装virtualenv
-$ pip install virtualenv  
+pip install virtualenv  
 #创建虚拟环境
-$ virtualenv -p /usr/local/bin/python3.6 ENV3.6  
+virtualenv -p /usr/local/bin/python3.6 ENV3.6  
 
 #激活虚拟环境
-$ source /ENV3.6/bin/activate  
+source ENV3.6/bin/activate  
 #查看当前环境下的安装包
-$ pip list  
+pip list  
 
 
 安装django
@@ -58,7 +58,12 @@ python manage.py migrate
 
 ```
 
+```shell
+模版引擎
+pip install Jinja2
 
+
+```
 
 ```shell
 添加管理员
