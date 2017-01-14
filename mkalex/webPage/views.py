@@ -17,4 +17,8 @@ def index(request):
 #block home page
 def blog(request):
     template=loader.get_template('webPage/blog.jinja')
-    return HttpResponse(template.render())
+    article_list = Article.objects.all();
+    content={
+        'list':article_list,
+    }
+    return HttpResponse(template.render(content))
