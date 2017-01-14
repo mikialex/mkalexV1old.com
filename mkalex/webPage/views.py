@@ -7,7 +7,14 @@ from django.template import loader
 from .models import Article
 
 def index(request):
-    template=loader.get_template('webPage/index.html')
+    template=loader.get_template('webPage/index.jinja')
     art=get_object_or_404(Article,pk=1)
     content ={'name':art.title}
     return HttpResponse(template.render(content))
+
+
+
+#block home page
+def blog(request):
+    template=loader.get_template('webPage/blog.jinja')
+    return HttpResponse(template.render())

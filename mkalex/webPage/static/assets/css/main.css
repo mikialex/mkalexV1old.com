@@ -744,7 +744,7 @@ body {
     background: #345;
     height: 0px;
     padding-bottom: 30%;
-    background-image: url("/image/commen/banner/blog.jpg");
+    background-image: url("../../image/commen/banner/blog.jpg");
     background-size: 100% 100%; }
     #blog-banner > .banner-content > div {
       width: 80%;
