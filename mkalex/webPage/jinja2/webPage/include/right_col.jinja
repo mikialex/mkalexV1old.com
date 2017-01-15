@@ -21,15 +21,11 @@
                 <h4>推荐</h4>
             </div>
             <ul class="right-col-ul-prom">
+                {% for rec_article in rec_list %}
                 <li>
-                    <a href="#">文章题目文章题目文章题目文章题目文章</a>
+                    <a href="#">{{ rec_article.article.title }}</a>
                 </li>
-                <li>
-                    <a href="#">文章题目文章题目文章题目文章题目文章章题目题</a>
-                </li>
-                <li>
-                    <a href="#">文章目文章dgffg</a>
-                </li>
+                {% endfor %}
             </ul>
         </div>
         <div class="">
