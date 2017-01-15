@@ -5,15 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<h1>test</h1
 
-    <ul>
-    {% for article in list %}
-        <li>{{ article.title }}</li>
-    {% else %}
-      <h2>没有找到</h2>
-    {% endfor %}
-    </ul>
 
     <section class="mk-blog-list">
         {% for article in list %}
@@ -26,14 +18,16 @@
                 <div class="">
                     <div class="">
                         <div class="mk-blog-block-info">
-                            <p>分类：设计</p><span>pv:123</span>
+                            <p>分类：{{ article.category }}</p><span>pv:{{ article.page_view }}</span>
                         </div>
                         <div class="mk-blog-block-tag">
-                            <p>标签：</p> <span>设计</span><span>造形</span>
+                            <p>标签：</p> {% for tag in article.tags.all() %}
+                            <span>{{tag.name}}</span>{% else %}<span>暂无标签</span>
+                            {% endfor %}
                         </div>
                     </div>
                     <ul>
-                        <li>revised 09 DEC 2016</li>
+                        <li>revised {{article.revise_time|datetime}}</li>
                         <li>published 09 DEC 2016</li>
                     </ul>
                 </div>
