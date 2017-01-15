@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from webPage.models import Article ,Tag
+from webPage.models import Article ,Tag,Recommended_article
 
 class article_tag(admin.ModelAdmin):#inline
     model=Tag
@@ -9,3 +9,4 @@ class article_tag(admin.ModelAdmin):#inline
 
 admin.site.register(Article,article_tag)
 admin.site.register(Tag)
+admin.site.register(Recommended_article)

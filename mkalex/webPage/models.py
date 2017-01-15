@@ -8,7 +8,6 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
-
 class Article(models.Model):
     title =models.CharField(max_length=100)  #题目
     sub_title =models.CharField(max_length=100,blank=True)  #副标题
@@ -34,3 +33,14 @@ class Article(models.Model):
 #     article=models.ForeignKey(Person, on_delete=models.CASCADE)
 #     tag=models.ForeignKey(Tag,on_delete=models.CASCADE)
 #
+
+class Recommended_article(models.Model):#推荐文章列表
+    article=models.OneToOneField(
+    Article,
+    on_delete=models.CASCADE,
+    related_name='is_recommended',
+    null=True,
+    )
+
+    def __str__(self):
+        return self.article.title
