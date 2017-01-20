@@ -10,6 +10,8 @@ class Tag(models.Model):
 
 class Category(models.Model):
     name=models.CharField(max_length=100,unique=True)#分类名
+    def __str__(self):
+        return self.name
 
 
 class Article(models.Model):
@@ -38,7 +40,6 @@ class Article(models.Model):
 #     article=models.ForeignKey(Person, on_delete=models.CASCADE)
 #     tag=models.ForeignKey(Tag,on_delete=models.CASCADE)
 #
-
 
 
 class Recommended_article(models.Model):#推荐文章列表

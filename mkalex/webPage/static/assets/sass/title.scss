@@ -1,0 +1,94 @@
+.mk-title-main{
+    display: flex;
+    width:100%;
+    height:rem(140px);
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    @media (max-width:700px ) {
+        height:rem(90px);
+    }
+    >.mk-title-main-t{
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        >.mk-title-main-s{
+            @media (max-width:700px ) {
+                display: none;
+            }
+            @extend .mk-small-dot;
+            &::before{
+                content: '';
+                display: block;
+                height:rem(60px);
+                margin-top: rem(-66px);
+                margin-left: rem(3px);
+                border-left: $line-border-light;
+            }
+            &::after{
+                content: '';
+                display: block;
+                height:rem(60px);
+                margin-top: rem(20px);
+                margin-left: rem(3px);
+                border-left: $line-border-light;
+            }
+        }
+        >.mk-title-main-h{
+            flex-grow: 1;
+            @media (max-width:700px ) {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            >h1{
+                display: inline-block;
+                font-size: rem(48px);
+                font-weight: 100;
+                padding-left: 10px;
+                padding-right: 10px;
+                max-width:rem(500px);
+                background-color: $page-background;
+                white-space: nowrap;
+                @media (max-width:700px ) {
+                    margin-right: 20px;
+                    white-space: normal;
+                    z-index: -1;
+                }
+            }
+            &::after{
+                content: '';
+                display: block;
+                width:100%;
+                position: relative;
+                top:rem(-64.5px);
+                z-index:-1;
+                border-top: $line-border-light;
+                @media (max-width:700px ) {
+                    display: none;
+                }
+            }
+        }
+    };
+    >.mk-title-main-logo{
+        width:rem(200px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width:700px ) {
+            display: none;
+        }
+        >div{
+            width:rem(150px);
+            height:rem(150px);
+            border-radius: rem(75px);
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >embed{
+                width:rem(100px);
+                height:rem(100px);
+            }
+        }
+    }
+}
