@@ -62,3 +62,10 @@ $ python manage.py createsuperuser
 
 
 ```
+
+```shell
+其他
+https://github.com/tjwalch/django-livereload-server
+pip install django-livereload-server
+pip install django-livereload
+```
