@@ -97,9 +97,11 @@ $mk-blog-block-changeflowwidth:750px;
         }
     }
     >img{
-        width:rem(230px);
         height:rem(125px);
+        width:auto;
         margin-right: rem(10px);
+        // background-color: #fff;
+        overflow: hidden;border-radius: rem(5px);
         @media(max-width: $mk-blog-block-changeflowwidth){
             width: 100%;
             height: auto;

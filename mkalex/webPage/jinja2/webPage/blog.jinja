@@ -1,7 +1,7 @@
 {% extends "webPage/layout/commen.jinja" %}
 
 {% block banner %}
-{% include "webPage/include/banner/bannerA.jinja" %}
+<!-- {% include "webPage/include/banner/bannerA.jinja" %} -->
 {% endblock %}
 
 {% block content %}
@@ -32,7 +32,8 @@
                     </ul>
                 </div>
             </div>
-            <img src="{{static("/image/test.png")}}" alt="" draggable="false">
+            <img src="{{static("/image/commen/defaultBlogimg.svg")}}" alt="" draggable="false">
+            <!-- <img src="{{static("/image/test.png")}}" alt="" draggable="false"> -->
         </div>
       {% endfor %}
     </section>
