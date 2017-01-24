@@ -14,10 +14,8 @@ def set_url(markdown_text):
 
 def index(request):
     template=loader.get_template('webPage/index.jinja')
-    art=get_object_or_404(Article,pk=1)
     content ={
         'page_title':'Index',
-        'name':art.title
     }
     return HttpResponse(template.render(content))
 

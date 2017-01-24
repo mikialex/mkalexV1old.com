@@ -9,7 +9,7 @@
 
     <section class="mk-blog-list">
         {% for article in list %}
-        <div class="mk-blog-block" onclick="window.location.href='#'">
+        <div class="mk-blog-block" onclick="window.location.href='{{ url('webPage:blog_detail', kwargs={'id': article.id}) }}'">
             <div class="">
                 <h3>{{ article.title }}</h3>
                 <h4>{%if article.sub_title%}

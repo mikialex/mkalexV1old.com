@@ -13,7 +13,7 @@ $mk-blog-block-changeflowwidth:750px;
     border-radius: rem(10px);
     border:$line-border;
     margin-bottom: rem(10px);
-    display: flex;
+    display: flex;cursor: pointer;
     justify-content: space-between;
     align-items: center;
     @media(max-width: $mk-blog-block-changeflowwidth){

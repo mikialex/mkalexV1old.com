@@ -21,8 +21,8 @@ class Article(models.Model):
     category=models.ForeignKey(Category,null=True)
     tags=models.ManyToManyField(Tag,blank=True)
 
-    publish_time=models.DateTimeField(auto_now_add=True) #发布日期
-    revise_time=models.DateTimeField(auto_now_add=True) #发布日期
+    publish_time=models.DateTimeField() #发布日期
+    revise_time=models.DateTimeField() #发布日期
 
     content_type=models.CharField(max_length=20) #文档类型
     content=models.TextField(blank=True)#文档内容
