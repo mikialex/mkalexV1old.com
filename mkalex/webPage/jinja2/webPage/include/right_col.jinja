@@ -5,14 +5,15 @@
                 <h4>分類</h4>
             </div>
             <ul class="right-col-ul-collection">
+                {% for cate in right_col_data.category %}
                 <li>
-                    <a href="#">设计</a> <span> 3</span>
+                    <a href="{{ url('webPage:blog_category_archive', kwargs={'category_id': cate.id}) }}">
+                    {{cate.name}}</a>
+                     <span> {{cate.num}}</span>
                 </li>
+                {% endfor %}
                 <li>
-                    <a href="#">前端开发</a> <span> 23</span>
-                </li>
-                <li>
-                    <a href="#">建模</a><span> 12</span>
+                    <a href="{{ url('webPage:blog') }}">all</a> <span> {{right_col_data.num_all}}</span>
                 </li>
             </ul>
         </div>
@@ -23,7 +24,7 @@
             <ul class="right-col-ul-prom">
                 {% for article in right_col_data.Recommended_article_list %}
                 <li>
-                    <a href="#">{{ article.title }}</a>
+                    <a href="{{ url('webPage:blog_detail', kwargs={'id': article.id}) }}">{{ article.title }}</a>
                 </li>
                 {% endfor %}
             </ul>
@@ -34,10 +35,13 @@
             </div>
             <ul class="right-col-ul-collection">
                 <li>
-                    <a href="#">2017</a> <span> {{right_col_data.num2017}}</span>
+                    <a href="{{ url('webPage:blog_year_archive', kwargs={'year': 2017}) }}">2017</a> <span> {{right_col_data.num2017}}</span>
                 </li>
                 <li>
-                    <a href="#">2016</a> <span> {{right_col_data.num2016}}</span>
+                    <a href="{{ url('webPage:blog_year_archive', kwargs={'year': 2016}) }}">2016</a> <span> {{right_col_data.num2016}}</span>
+                </li>
+                <li>
+                    <a href="{{ url('webPage:blog') }}">all</a> <span> {{right_col_data.num_all}}</span>
                 </li>
             </ul>
         </div>

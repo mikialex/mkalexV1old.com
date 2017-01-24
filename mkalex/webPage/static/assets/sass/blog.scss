@@ -70,6 +70,9 @@ $mk-blog-block-changeflowwidth:750px;
                     >p{
                         margin:0px;
                     }
+                    >span{
+                        padding-left: rem(5px);padding-right: rem(5px)
+                    }
                     @media(max-width: $mk-blog-block-changeflowwidth){
                         display: none;
                     }
@@ -78,6 +81,9 @@ $mk-blog-block-changeflowwidth:750px;
                     display: flex;
                     >p{
                         margin:0px;
+                    }
+                    >span{
+                        padding-left: rem(5px);padding-right: rem(5px)
                     }
                     @media(max-width: $mk-blog-block-changeflowwidth){
                         flex-direction: column;
