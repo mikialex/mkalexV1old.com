@@ -21,9 +21,9 @@
                 <h4>推荐</h4>
             </div>
             <ul class="right-col-ul-prom">
-                {% for rec_article in rec_list %}
+                {% for article in right_col_data.Recommended_article_list %}
                 <li>
-                    <a href="#">{{ rec_article.article.title }}</a>
+                    <a href="#">{{ article.title }}</a>
                 </li>
                 {% endfor %}
             </ul>
@@ -34,10 +34,10 @@
             </div>
             <ul class="right-col-ul-collection">
                 <li>
-                    <a href="#">2017</a> <span> 3</span>
+                    <a href="#">2017</a> <span> {{right_col_data.num2017}}</span>
                 </li>
                 <li>
-                    <a href="#">2016</a> <span> 23</span>
+                    <a href="#">2016</a> <span> {{right_col_data.num2016}}</span>
                 </li>
             </ul>
         </div>
