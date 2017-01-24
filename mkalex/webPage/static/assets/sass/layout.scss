@@ -15,8 +15,13 @@ html {
     width: rem(1000px);
     margin: auto;
     display: flex;
-    @media (max-width: $desktop-min-width) {
+    @media (max-width: $desktop-min-width+10px) {
         width:95%;
+    }
+    >.mk-main-content{
+        @media (max-width: 1000px) {
+            width:100%;
+        }
     }
 }
 
