@@ -9,7 +9,7 @@
 
     <section class="mk-blog-list">
         {% for article in list %}
-        <div class="mk-blog-block">
+        <div class="mk-blog-block" onclick="window.location.href='#'">
             <div class="">
                 <h3>{{ article.title }}</h3>
                 <h4>{%if article.sub_title%}
@@ -32,6 +32,8 @@
                     </ul>
                 </div>
             </div>
+            <a href="#" style="display:none;"></a>
+            <!-- seo -->
             <img src="{{static("/image/commen/defaultBlogimg.svg")}}" alt="" draggable="false">
             <!-- <img src="{{static("/image/test.png")}}" alt="" draggable="false"> -->
         </div>

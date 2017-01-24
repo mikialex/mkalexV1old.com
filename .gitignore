@@ -1,8 +1,11 @@
-staticDev/
+_posts/
 
 mkalex/.sass-cache
 mkalex/webPage/static/assets/sass/.sass-cache
 mkalex/webPage/static/assets/css/main.css
+
+
+mkalex/webPage/static/image/blog
 
 .jsbeautifyrc
 

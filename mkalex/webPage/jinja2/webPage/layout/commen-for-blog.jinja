@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html>
 {% include "webPage/include/head.jinja" %}
     <body>
         {% include "webPage/include/responsive.jinja" %}
@@ -13,7 +11,9 @@
             <div class="mk-container">
               <div class="mk-main-layout">
                 <div class="mk-main-content" >
-                    {% block content %}{% endblock %}
+                    <div class="mk-blog-box">
+                        {% block content %}{% endblock %}
+                    </div>
                 </div>
                 {% include "webPage/include/right_col.jinja" %}
                 </div>
