@@ -69,6 +69,8 @@ def blog(request):
 def blog_detail(request,id):
     template=loader.get_template('webPage/blog_detail.jinja')
     article = get_object_or_404(Article,pk=id);
+    pv=article.page_view+1;
+    Article.objects.filter(pk=id).update(page_view=pv)
     content_html=markdowner.convert(set_url(article.content))
     content={
         'page_title':article.title,
