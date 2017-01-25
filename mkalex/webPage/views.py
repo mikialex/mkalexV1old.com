@@ -68,7 +68,7 @@ def blog(request):
 
 def blog_detail(request,id):
     template=loader.get_template('webPage/blog_detail.jinja')
-    article = Article.objects.get(pk=id);
+    article = get_object_or_404(Article,pk=id);
     content_html=markdowner.convert(set_url(article.content))
     content={
         'page_title':article.title,
@@ -97,7 +97,7 @@ def blog_year_archive(request,year):
 def blog_category_archive(request,category_id):
     template=loader.get_template('webPage/blog.jinja')
     article_list = Article.objects.filter(category_id=category_id)
-    category_name=Category.objects.get(id=category_id).name
+    category_name=get_object_or_404(Category,id=category_id).name
     content={
         'page_title':'Blog 的 '+ category_name+' 子分类',
         'list':article_list,
@@ -146,3 +146,13 @@ def about(request):
         'right_col_data':get_right_col(),
     }
     return HttpResponse(template.render(content))
+
+
+
+def page_not_found(request):
+    template=loader.get_template('webPage/404.jinja')
+    return HttpResponse(template.render())
+
+def page_error(request):
+    template=loader.get_template('webPage/500.jinja')
+    return HttpResponse(template.render())

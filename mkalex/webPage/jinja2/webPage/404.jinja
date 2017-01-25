@@ -1,0 +1,13 @@
+{% extends "webPage/layout/clean.jinja" %}
+
+
+{% block content %}
+
+<div class="mk-404">
+    <h1>404</h1>
+    <h2>找不到所请求的资源</h2>
+    <h3>可能因为链接被重置或过期 <br>或者其他神秘的原因</h3>
+    <button onclick="window.history.go(-1)">返回上一页</button>
+</div>
+
+{% endblock %}

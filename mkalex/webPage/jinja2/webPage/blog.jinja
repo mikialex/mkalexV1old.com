@@ -37,7 +37,9 @@
             <img src="{{static("/image/commen/defaultBlogimg.svg")}}" alt="" draggable="false">
             <!-- <img src="{{static("/image/test.png")}}" alt="" draggable="false"> -->
         </div>
-      {% endfor %}
+        {% else %}
+        <h2>no blog found</h2>
+        {% endfor %}
     </section>
 
 {% endblock %}

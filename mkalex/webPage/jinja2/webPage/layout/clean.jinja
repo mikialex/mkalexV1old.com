@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+{% include "webPage/include/head.jinja" %}
+    <body>
+        {% include "webPage/include/responsive.jinja" %}
+        <div class="mk-page">
+
+            <div class="mk-container">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

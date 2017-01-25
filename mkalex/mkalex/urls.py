@@ -16,14 +16,16 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 
+
 from webPage import views
 
+from django.conf.urls import handler404, handler500
+handler404 = "webPage.views.page_not_found"
+handler500 = "webPage.views.page_error"
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     url(r'^',include('webPage.urls'))
 
-    # url(r'^$',views.home,name='home'),
-    # url(r'^(?P<my_args>\d+)/$', views.detail, name='detail'),
 ]

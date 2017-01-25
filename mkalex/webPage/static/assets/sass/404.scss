@@ -1,0 +1,39 @@
+.mk-404 {
+    width:100%;
+    h1 {
+        text-align: center;
+        width: 100%;
+        font-weight: 100;font-size: rem(81px);
+    }
+
+    h2 {
+        text-align: center;
+        width: 100%;
+        font-weight: 200;font-size: rem(32px);
+    }
+    h3 {
+        text-align: center;
+        width: 100%;
+        font-weight: 100;font-size: rem(16px);
+    }
+
+    button{
+        display: block;
+        margin:auto;
+        width:rem(100px);
+        height:rem(100px);
+        border-radius: rem(50px);outline: none;
+        background-color: #fff;border-style: none;
+        box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+        font-size: rem(16px);
+        transition: 0.2s ease-out;
+        &:hover{
+            background-color: #000;
+            box-shadow: 0px 3px 3px 0px rgb(255, 0, 13);
+            color:#fff;
+        }
+        &:active{
+            background-color: rgb(255, 0, 13);
+        }
+    }
+}

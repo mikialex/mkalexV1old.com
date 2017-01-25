@@ -26,6 +26,8 @@
                 <li>
                     <a href="{{ url('webPage:blog_detail', kwargs={'id': article.id}) }}">{{ article.title }}</a>
                 </li>
+                {% else %}
+                <span>no blog found</span>
                 {% endfor %}
             </ul>
         </div>
