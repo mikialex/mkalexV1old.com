@@ -71,7 +71,8 @@ def blog_detail(request,id):
     article = Article.objects.get(pk=id);
     content_html=markdowner.convert(set_url(article.content))
     content={
-        'page_title':'Blog',
+        'page_title':article.title,
+        'page_subtitle':article.sub_title,
         'content':content_html,
         'right_col_data':get_right_col(),
     }
