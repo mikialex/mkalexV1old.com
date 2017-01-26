@@ -1,3 +1,5 @@
+#coding=utf-8
+from __future__ import unicode_literals
 from django.shortcuts import render ,get_object_or_404
 # from django.db.models import Count
 
@@ -101,7 +103,7 @@ def blog_category_archive(request,category_id):
     article_list = Article.objects.filter(category_id=category_id)
     category_name=get_object_or_404(Category,id=category_id).name
     content={
-        'page_title':'Blog 的 '+ category_name+' 子分类',
+        'page_title':u'Blog 的 '+ category_name+ u' 子分类',
         'list':article_list,
         'right_col_data':get_right_col(),
     }

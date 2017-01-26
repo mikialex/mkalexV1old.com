@@ -68,4 +68,7 @@ $ python manage.py createsuperuser
 https://github.com/tjwalch/django-livereload-server
 pip install django-livereload-server
 pip install django-livereload
+
+pip install markdown2
+pip install bootstrap-admin
 ```
