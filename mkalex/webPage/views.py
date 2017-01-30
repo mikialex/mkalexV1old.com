@@ -18,7 +18,7 @@ def set_url(markdown_text):
 
 def get_right_col():
 
-    category_list=Category.objects.all()
+    category_list=list(Category.objects.all())
     def count_category_num(category):
         return {'name':category.name,
         'num':Article.objects.filter(category_id=category.id).count(),

@@ -6,12 +6,12 @@ from django.db import models
 class Tag(models.Model):
     name=models.CharField(max_length=100,unique=True)#标签名
 
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
 class Category(models.Model):
     name=models.CharField(max_length=100,unique=True)#分类名
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
 
@@ -30,7 +30,7 @@ class Article(models.Model):
 
     page_view=models.IntegerField(default=0)#访客计数
 
-    def __str__(self):
+    def __unicode__(self):
         return self.title
 
     class Meta:#时间下降排序
@@ -51,5 +51,5 @@ class Recommended_article(models.Model):#推荐文章列表
     null=True,
     )
 
-    def __str__(self):
+    def __unicode__(self):
         return self.article.title
