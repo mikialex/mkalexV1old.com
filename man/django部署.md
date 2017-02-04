@@ -23,3 +23,8 @@ tar Jxvf Python-3.5.1.tar.xz
  make && make install
 
 ```
+
+```
+将每个app下，包括installed app内的static文件收集至static root
+python manage.py collectstatic
+```
