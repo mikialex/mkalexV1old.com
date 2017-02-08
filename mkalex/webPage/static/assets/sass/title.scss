@@ -1,12 +1,12 @@
 .mk-title-main{
     display: flex;
-    width:100%;
+    width:100%;margin-top: rem(100px);
     height:rem(140px);
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
     @media (max-width:700px ) {
-        height:rem(90px);
+        height:rem(90px);margin-top: rem(60px);
     }
     >.mk-title-main-t{
         display: flex;
@@ -49,7 +49,7 @@
                 @media (max-width:700px ) {
                     margin-right: 20px;
                     white-space: nowrap;
-                    font-size: rem(32px);
+                    font-size: rem(46px);
                     z-index: -1;
                 }
             }
@@ -103,8 +103,8 @@
         >div{
             width:rem(150px);
             height:rem(150px);
-            border-radius: rem(75px);
-            background-color: #fff;
+            // border-radius: rem(75px);
+            // background-color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;

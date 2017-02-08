@@ -1,6 +1,9 @@
 .mk-blog-box{
     padding-left: rem(10px);
-    padding-right: rem(10px);
+    padding-right: rem(30px);
+    @media(max-width:1000px){
+        padding-right: rem(10px);
+    }
     img{
         max-width:100%;
         border-radius: rem(5px);
@@ -33,6 +36,7 @@
         margin-top: rem(30px);
         margin-bottom: rem(30px);
         font-size: rem(16px);
+        text-align: justify;
     }
 
     hr{

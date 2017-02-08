@@ -3,6 +3,9 @@
     >h2{
         font-size: rem(36px);font-weight: 100;color:#c6c6c6;
         margin-top: rem(60px);margin-bottom: rem(0px);
+        @media(max-width:800px){
+            font-weight: 300;
+        }
 
     }
     >ul{
@@ -12,9 +15,10 @@
 
 
 .m-r-b-titles{
-
+background-color: #fff;
+padding: rem(10px);margin-bottom: rem(20px);margin-right: rem(10px);
     @media(max-width:800px){
-        border-left: 2px solid rgb(181, 181, 181);
+        border-left: 2px solid rgb(218, 218, 218);
     }
     >div{
         padding-left: rem(20px);padding-right: rem(40px);
@@ -42,7 +46,7 @@
         }
         >span{
             font-size: rem(20px);margin-top: rem(10px);
-            color:rgb(184, 184, 184);font-weight: 200;
+            color:rgb(116, 116, 116);font-weight: 300;
             @media(max-width:500px){
                 font-size: rem(16px);
             }
@@ -65,8 +69,10 @@
 }
 
 .m-r-b-details{
+background-color: #fff;
+padding: rem(10px);margin-bottom: rem(20px);margin-right: rem(10px);
     @media(max-width:800px){
-        border-left: 2px solid rgb(181, 181, 181);
+        border-left: 2px solid rgb(218, 218, 218);
     }
     >div{
         padding-left: rem(20px);padding-right: rem(40px);
@@ -94,7 +100,7 @@
         }
         >a{
             font-size: rem(20px);
-            color:rgb(184, 184, 184);font-weight: 200;
+            color:rgb(139, 60, 60);font-weight: 300;
             @media(max-width:500px){
                 font-size: rem(16px);
             }
@@ -102,8 +108,8 @@
     }
     >p{
         padding-left: rem(40px);padding-right: rem(40px);
-        font-size: rem(16px);color:rgb(139, 139, 139);
-        font-weight: 200;
+        font-size: rem(16px);color:rgb(85, 85, 85);
+        font-weight: 300;
         @media(max-width:800px){
             padding:rem(10px);padding-right: 0px;
         }
