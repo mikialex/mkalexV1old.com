@@ -109,9 +109,10 @@ $mk-blog-block-changeflowwidth:750px;
         // background-color: #fff;
         overflow: hidden;border-radius: rem(5px);
         @media(max-width: $mk-blog-block-changeflowwidth){
-            width: 100%;
+            width: 80%;
             height: auto;
-            margin-top:rem(5px);
+            margin-top:rem(15px);
+            margin-bottom:rem(15px);
             margin-right: rem(0px);
         }
     }

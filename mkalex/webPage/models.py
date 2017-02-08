@@ -16,6 +16,9 @@ class Category(models.Model):
 
 
 class Article(models.Model):
+    # url_name=models.CharField(max_length=100,unique=True)
+    url_name=models.CharField(max_length=100,unique=True)
+
     title =models.CharField(max_length=100)  #题目
     sub_title =models.CharField(max_length=100,blank=True)  #副标题
     # category =models.CharField(max_length=20,blank=True) #分类
@@ -29,6 +32,7 @@ class Article(models.Model):
     content=models.TextField(blank=True)#文档内容
 
     page_view=models.IntegerField(default=0)#访客计数
+    has_cover=models.BooleanField(default=False)#是否有封面，封面文件应当位于blog对应文件名下cover.png
 
     def __unicode__(self):
         return self.title

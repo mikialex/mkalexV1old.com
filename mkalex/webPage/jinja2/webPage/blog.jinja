@@ -32,8 +32,9 @@
                     </ul>
                 </div>
             </div>
-            <a href="#" style="display:none;"></a>
+            <a href="{{ url('webPage:blog_detail', kwargs={'id': article.id}) }}" style="display:none;"></a>
             <!-- seo -->
+            <!-- <img src="{{static("/image/commen/defaultBlogimg.svg")}}" alt="" draggable="false"> -->
             <img src="{{static("/image/commen/defaultBlogimg.svg")}}" alt="" draggable="false">
             <!-- <img src="{{static("/image/test.png")}}" alt="" draggable="false"> -->
         </div>
