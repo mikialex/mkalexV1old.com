@@ -24,7 +24,7 @@
             <ul class="right-col-ul-prom">
                 {% for article in right_col_data.Recommended_article_list %}
                 <li>
-                    <a href="{{ url('webPage:blog_detail', kwargs={'id': article.id}) }}">{{ article.title }}</a>
+                    <a href="{{ url('webPage:blog_detail', kwargs={'name': article.url_name}) }}">{{ article.title }}</a>
                 </li>
                 {% else %}
                 <span>no blog found</span>

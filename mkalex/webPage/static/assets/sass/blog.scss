@@ -103,8 +103,10 @@ $mk-blog-block-changeflowwidth:750px;
         }
     }
     >img{
+        flex-grow: 1;
         height:rem(125px);
         width:auto;
+        min-width:rem(230px);
         margin-right: rem(10px);
         // background-color: #fff;
         overflow: hidden;border-radius: rem(5px);

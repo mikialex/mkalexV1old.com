@@ -9,7 +9,7 @@
 
     <section class="mk-blog-list">
         {% for article in list %}
-        <div class="mk-blog-block" onclick="window.location.href='{{ url('webPage:blog_detail', kwargs={'id': article.id}) }}'">
+        <div class="mk-blog-block" onclick="window.location.href='{{ url('webPage:blog_detail', kwargs={'name': article.url_name}) }}'">
             <div class="">
                 <h3>{{ article.title }}</h3>
                 <h4>{%if article.sub_title%}
@@ -32,11 +32,14 @@
                     </ul>
                 </div>
             </div>
-            <a href="{{ url('webPage:blog_detail', kwargs={'id': article.id}) }}" style="display:none;"></a>
+            <a href="{{ url('webPage:blog_detail', kwargs={'name': article.url_name}) }}" style="display:none;"></a>
             <!-- seo -->
             <!-- <img src="{{static("/image/commen/defaultBlogimg.svg")}}" alt="" draggable="false"> -->
-            <img src="{{static("/image/commen/defaultBlogimg.svg")}}" alt="" draggable="false">
-            <!-- <img src="{{static("/image/test.png")}}" alt="" draggable="false"> -->
+                {%if article.has_cover%}
+                <img src="{{static("/image/blog/"+article.url_name+"/"+"cover.png")}}" alt="" draggable="false">
+                {%else%}
+                <img src="{{static("/image/commen/defaultBlogCover.png")}}" alt="" draggable="false">
+                {%endif%}
         </div>
         {% else %}
         <h2>no blog found</h2>
