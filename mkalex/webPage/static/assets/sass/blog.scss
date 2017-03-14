@@ -10,8 +10,8 @@ $mk-blog-block-changeflowwidth:750px;
 .mk-blog-block{
     width:100%;
     height:rem(145px);
-    border-radius: rem(10px);
-    border:$line-border;
+    border-radius: rem(3px);
+    border:$line-border;background-color: #fff;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1),0px 2px 0px 0px rgba(255, 255, 255, 1) inset;
     margin-bottom: rem(10px);
     display: flex;cursor: pointer;
@@ -29,11 +29,11 @@ $mk-blog-block-changeflowwidth:750px;
     >div{
         flex-grow: 1;
         width:100%;
-        >h3{
-            font-size: rem(32px);
-            font-weight: 500;
+        >h3{//标题
+            font-size: rem(27px);
+            font-weight: 200;
             color: #616161;
-            margin:rem(0px) rem(10px) rem(5px) rem(10px);
+            margin:rem(0px) rem(10px) rem(5px) rem(20px);
             @media(max-width: 900px){
                 font-size: rem(24px);
             }
@@ -42,12 +42,12 @@ $mk-blog-block-changeflowwidth:750px;
             }
         }
         >h4{
-            font-size: rem(18px);
+            font-size: rem(16px);
             font-weight: 400;
             color: #7F7F7F;
-            margin: rem(0px) rem(10px) rem(5px) rem(30px);
+            margin: rem(0px) rem(10px) rem(10px) rem(35px);
             @media(max-width: $mk-blog-block-changeflowwidth){
-                margin:rem(10px) rem(10px) rem(5px) rem(10px);
+                margin:rem(10px) rem(10px) rem(10px) rem(10px);
             }
         }
         >div{
@@ -57,7 +57,7 @@ $mk-blog-block-changeflowwidth:750px;
             justify-content: space-between;align-items: center;
             height: rem(40px);
             padding-top:rem(5px);
-            margin-left: rem(30px);
+            margin-left: rem(35px);
             margin-right: rem(10px);
             @media(max-width: $mk-blog-block-changeflowwidth){
                 margin:rem(10px) rem(10px) rem(5px) rem(10px);
