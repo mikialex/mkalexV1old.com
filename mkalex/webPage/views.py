@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 from django.shortcuts import render ,get_object_or_404
 # from django.db.models import Count
 
+from django.core.paginator import Paginator ,EmptyPage,PageNotAnInteger
+
 # Create your views here.
 from django.http import HttpResponse ,Http404
 from django.template import loader
@@ -58,7 +60,14 @@ def index(request):
 def blog(request):
     template=loader.get_template('webPage/blog.jinja')
     article_list = Article.objects.all()
-    category=Category.objects.all()
+    page = request.GET.get('page')  # 获取页码
+    paginator = Paginator(article_list, 6)  # 实例化一个分页对象
+    try:
+        article_list = paginator.page(page)  # 获取某页对应的记录
+    except PageNotAnInteger:  # 如果页码不是个整数
+        article_list = paginator.page(1)  # 取第一页的记录
+    except EmptyPage:  # 如果页码太大，没有相应的记录
+        article_list = paginator.page(paginator.num_pages)  # 取最后一页的记录
     content={
         'page_title':'Blog',
         'list':article_list,
