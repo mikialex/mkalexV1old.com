@@ -58,7 +58,7 @@ def index(request):
 
 #blog home page
 def blog(request):
-    template=loader.get_template('webPage/blog.jinja')
+    template=loader.get_template('webPage/blog_list.jinja')
     article_list = Article.objects.all()
     page = request.GET.get('page')  # 获取页码
     paginator = Paginator(article_list, 6)  # 实例化一个分页对象
@@ -95,7 +95,7 @@ def blog_detail(request,name):
 
 
 def blog_year_archive(request,year):
-    template=loader.get_template('webPage/blog.jinja')
+    template=loader.get_template('webPage/blog_list_without_pagination.jinja')
     article_list = Article.objects.filter(publish_time__year=year)
     content={
         'page_title':'Blog in '+year,
@@ -108,7 +108,7 @@ def blog_year_archive(request,year):
 
 
 def blog_category_archive(request,category_id):
-    template=loader.get_template('webPage/blog.jinja')
+    template=loader.get_template('webPage/blog_list_without_pagination.jinja')
     article_list = Article.objects.filter(category_id=category_id)
     category_name=get_object_or_404(Category,id=category_id).name
     content={

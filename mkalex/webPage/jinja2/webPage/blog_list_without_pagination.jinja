@@ -1,0 +1,46 @@
+{% extends "webPage/layout/commen.jinja" %}
+
+{% block banner %}
+<!-- {% include "webPage/include/banner/bannerA.jinja" %} -->
+{% endblock %}
+
+{% block content %}
+
+
+    <section class="mk-blog-list">
+        {% for article in list %}
+        <div class="mk-blog-block" onclick="window.location.href='{{ url('webPage:blog_detail', kwargs={'name': article.url_name}) }}'">
+            <div class="">
+                <h3>{{ article.title }}</h3>
+                <h4>{%if article.sub_title%}
+                    {{ article.sub_title }}
+                    {%else%}no subtitle{%endif%}</h4>
+                <div class="">
+                    <div class="">
+                        <div class="mk-blog-block-info">
+                            <p>分类：{{ article.category }}</p><span>viewed:{{ article.page_view }}</span>
+                        </div>
+                        <div class="mk-blog-block-tag">
+                            <p>标签：</p> {% for tag in article.tags.all() %}
+                            <span>{{tag.name}}</span>{% else %}<span>暂无标签</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <ul>
+                        <li>revised {{article.revise_time|datetime}}</li>
+                        <li>published {{article.publish_time|datetime}}</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <img src="{{static("/image/commen/defaultBlogimg.svg")}}" alt="" draggable="false"> -->
+                {%if article.has_cover%}
+                <img src="{{static("/image/blog/"+article.url_name+"/"+"cover.png")}}" alt="" draggable="false">
+                {%else%}
+                <img src="{{static("/image/commen/defaultBlogCover.png")}}" alt="" draggable="false">
+                {%endif%}
+        </div>
+        {% else %}
+        <h2>no blog found</h2>
+        {% endfor %}
+    </section>
+{% endblock %}

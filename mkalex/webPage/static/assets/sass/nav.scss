@@ -64,8 +64,9 @@
         }
     }
     >div{
-        display: flex;
+        display: flex;padding: 5px;
         >div{
+          margin-top: 5px;margin-bottom: 15px;
             >embed{
                 margin:0px;
                 font-size: rem(32px);
