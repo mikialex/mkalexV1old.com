@@ -3,6 +3,9 @@ var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
 
+const globalSass = path.resolve(__dirname, '../src/sass/global.scss')
+
+
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
@@ -22,7 +25,8 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src')
+      '@': resolve('src'),
+      globalSass,
     }
   },
   module: {

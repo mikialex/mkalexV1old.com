@@ -10,8 +10,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~globalSass";
 nav{
-  width:100%;height:20px;
+  width:100%;height:r(20);
   position:fixed;top:0px;
   background: #000;
 }
