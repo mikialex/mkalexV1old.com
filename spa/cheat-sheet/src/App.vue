@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <top-nav></top-nav>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import topNav from '@/components/top-nav.vue'
 export default {
-  name: 'app'
+  name: 'app',
+  components:{
+    'top-nav':topNav,
+  }
 }
 </script>
 
