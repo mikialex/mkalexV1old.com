@@ -47,7 +47,7 @@ class Article(models.Model):
 #
 
 
-class Recommended_article(models.Model):#推荐文章列表
+class Recommended_article(models.Model):#推荐文章列表 one to one 仅作为演示 不推荐
     article=models.OneToOneField(
     Article,
     on_delete=models.CASCADE,
@@ -57,3 +57,14 @@ class Recommended_article(models.Model):#推荐文章列表
 
     def __unicode__(self):
         return self.article.title
+
+
+# class Cheet_sheet_project(models.Model):#cheet-sheet项目表
+#     project_id=models.IntegerField(unique=True)#项目id
+#     name=models.CharField(max_length=100,unique=True)#项目名
+#     url_name=models.CharField(max_length=100,unique=True)#项目静态资源url
+# 
+# class Cheet_sheet_item(models.Model):#cheet-sheet 条目
+#     content=models.TextField(blank=True)#文档内容
+#     name=models.CharField(max_length=100,unique=True)#条目名
+#     url_name=models.CharField(max_length=100,unique=True)#条目静态资源url

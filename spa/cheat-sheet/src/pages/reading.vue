@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import projectSlot from '@/components/project-slot.vue'
-import itemList from '@/components/item-list.vue'
-import pageDetail from '@/components/page-detail.vue'
+import projectSlot from '@/components/project-slot/container.vue'
+import itemList from '@/components/middle-panel/item-list.vue'
+import pageDetail from '@/components/reading-page/page-detail.vue'
 export default {
   components:{
     'project-slot':projectSlot,

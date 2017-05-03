@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import topNav from '@/components/top-nav.vue'
+import topNav from '@/components/nav/top-nav.vue'
 export default {
   name: 'app',
   components:{
