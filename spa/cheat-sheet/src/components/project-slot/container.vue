@@ -18,10 +18,13 @@ export default {
 <style lang="scss" scoped>
 @import "~globalSass";
 section{
-  width:r(55);height:100vh;
-  background: rgb(94, 94, 94);
-  padding-top: 25px;
+  width:r(55);
+  // height: 100vh;
+  height:100%;
+  background-image:url(../../assets/project-slot-container-back.png);
+  background-size: 25px 25px;
   display: flex;flex-direction: column;
   align-items: center;
+  box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 </style>

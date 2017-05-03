@@ -1,19 +1,23 @@
 <template lang="html">
   <section>
-
+    <sheet-item></sheet-item>
   </section>
 </template>
 
 <script>
+import item from './item.vue'
 export default {
+  components:{
+    'sheet-item':item,
+  }
 }
 </script>
 
 <style lang="scss" scoped>
   section{
-    width: 250px;
-    height: 100vh;
+    width: 100%;
+
     overflow-y: scroll;
-    background: rgb(213, 213, 213)
+    background: #fff;
   }
 </style>

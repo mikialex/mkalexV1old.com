@@ -1,19 +1,21 @@
 <template lang="html">
   <section>
-    <project-slot></project-slot>
-    <item-list></item-list>
-    <page-detail></page-detail>
+    <main>
+      <project-slot></project-slot>
+      <middle-panel></middle-panel>
+      <page-detail></page-detail>
+    </main>
   </section>
 </template>
 
 <script>
 import projectSlot from '@/components/project-slot/container.vue'
-import itemList from '@/components/middle-panel/item-list.vue'
+import panel from '@/components/middle-panel/panel-all.vue'
 import pageDetail from '@/components/reading-page/page-detail.vue'
 export default {
   components:{
     'project-slot':projectSlot,
-    'item-list':itemList,
+    'middle-panel':panel,
     'page-detail':pageDetail,
   }
 }
@@ -21,6 +23,16 @@ export default {
 
 <style lang="scss" scoped>
 section{
-display: flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  >main{
+    width:100%;
+    margin-top: 20px;
+    height: calc(100vh - 20px);
+    // flex-grow: 1;
+    display: flex;
+    align-items: center;;
+  }
 }
 </style>
