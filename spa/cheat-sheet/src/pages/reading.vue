@@ -3,7 +3,9 @@
     <main>
       <project-slot></project-slot>
       <middle-panel></middle-panel>
-      <page-detail></page-detail>
+      <page-detail>
+        <router-view></router-view>
+      </page-detail>
     </main>
   </section>
 </template>

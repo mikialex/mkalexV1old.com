@@ -1,24 +1,14 @@
 <template lang="html">
   <section>
-    <div class="" v-html="contentHtml">
-
-    </div>
+    <main class="" >
+      <slot></slot>
+    </main>
   </section>
 </template>
 
 <script>
-import {markdown} from 'markdown';
 export default {
-  data(){
-    return {
-      content:'*loading*'
-    }
-  },
-  computed:{
-    contentHtml(){
-      return markdown.toHTML(this.content)
-    }
-  },
+
   mounted(){
     // this.content=markdown.toHTML( "Hello *World*!" )
   }
@@ -28,8 +18,18 @@ export default {
 <style lang="scss" scoped>
 section{
   flex-grow: 1;
-  // height: 100vh;
-
+  background: url(../../assets/sand-back.png);
+  background-size: 40px 40px;
   overflow-y: scroll;
+  display: flex;flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  >main{
+    width: 100%;
+    margin:30px;
+    background: #fff;
+    box-shadow: 0 2px 39px 0 rgba(0,0,0,0.09), 0 2px 4px 0 rgba(0,0,0,0.19);
+    border-radius: 2px;
+  }
 }
 </style>

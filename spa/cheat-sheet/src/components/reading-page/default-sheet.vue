@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-      标题名称－标题名称
+    default sheet
   </div>
 </template>
 
@@ -9,7 +9,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "~globalSass";
-
+<style lang="css">
 </style>
