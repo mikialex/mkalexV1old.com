@@ -1,11 +1,15 @@
 <template lang="html">
   <nav>
-
+    <nav-logo></nav-logo>
   </nav>
 </template>
 
 <script>
+import logo from './cheet-sheet-nav-logo.vue'
 export default {
+  components:{
+    'nav-logo':logo
+  }
 }
 </script>
 

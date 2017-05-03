@@ -133,10 +133,18 @@ def portfolio(request):
 
 
 def archive(request):
-    template=loader.get_template('webPage/archive.jinja')
+    template=loader.get_template('webPage/spa-index-deploy/index.jinja')
     content={
-        'page_title':'Archive',
-        'right_col_data':get_right_col(),
+        # 'page_title':'Archive',
+        # 'right_col_data':get_right_col(),
+    }
+    return HttpResponse(template.render(content))
+
+def cheetSheet(request):
+    template=loader.get_template('webPage/spa-index-deploy/index.jinja')
+    content={
+        # 'page_title':'Archive',
+        # 'right_col_data':get_right_col(),
     }
     return HttpResponse(template.render(content))
 

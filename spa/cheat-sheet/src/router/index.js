@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import welcome from '@/pages/welcome.vue'
 import reading from '@/pages/reading.vue'
 
 Vue.use(Router)
@@ -8,7 +9,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect:'/reading'
+      name:'welcome',
+      component:welcome
     }, {
       path: '/reading',
       name: 'reading',
