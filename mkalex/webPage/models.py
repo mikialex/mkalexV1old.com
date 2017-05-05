@@ -59,12 +59,20 @@ class Recommended_article(models.Model):#推荐文章列表 one to one 仅作为
         return self.article.title
 
 
-# class Cheet_sheet_project(models.Model):#cheet-sheet项目表
-#     project_id=models.IntegerField(unique=True)#项目id
-#     name=models.CharField(max_length=100,unique=True)#项目名
-#     url_name=models.CharField(max_length=100,unique=True)#项目静态资源url
-# 
-# class Cheet_sheet_item(models.Model):#cheet-sheet 条目
-#     content=models.TextField(blank=True)#文档内容
-#     name=models.CharField(max_length=100,unique=True)#条目名
-#     url_name=models.CharField(max_length=100,unique=True)#条目静态资源url
+
+
+##########################cheet-sheet project
+
+class Cheet_sheet_project(models.Model):#cheet-sheet项目表
+    name=models.CharField(max_length=100,unique=True)#项目名
+    url_name=models.CharField(max_length=100,unique=True)#项目静态资源url
+    def __unicode__(self):
+        return self.name
+
+class Cheet_sheet_item(models.Model):#cheet-sheet 条目
+    content=models.TextField(blank=True)#文档内容
+    name=models.CharField(max_length=100,unique=True)#条目名
+    url_name=models.CharField(max_length=100,unique=True)#条目静态资源url
+    project=models.ForeignKey(Cheet_sheet_project)
+    def __unicode__(self):
+        return self.name
