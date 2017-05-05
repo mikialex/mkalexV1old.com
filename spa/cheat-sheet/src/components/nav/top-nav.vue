@@ -19,5 +19,8 @@ nav{
   width:100%;height:r(20);
   position:fixed;top:0px;
   background: #000;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 </style>

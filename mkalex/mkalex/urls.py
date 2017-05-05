@@ -19,6 +19,25 @@ from django.contrib import admin
 
 from webPage import views
 
+# from webPage.models import Article,Recommended_article,Category
+# from rest_framework import routers, serializers, viewsets
+#
+# # Serializers define the API representation.
+# class ArticleSerializer(serializers.HyperlinkedModelSerializer):
+#     class Meta:
+#         model = Article
+#         fields = ('url_name', 'title')
+#
+# # ViewSets define the view behavior.
+# class ArticleViewSet(viewsets.ModelViewSet):
+#     queryset = Article.objects.all()
+#     serializer_class = ArticleSerializer
+#
+# # Routers provide an easy way of automatically determining the URL conf.
+# router = routers.DefaultRouter()
+# router.register(r'article', ArticleSerializer)
+
+
 from django.conf.urls import handler404, handler500
 handler404 = "webPage.views.page_not_found"
 handler500 = "webPage.views.page_error"
@@ -26,6 +45,8 @@ handler500 = "webPage.views.page_error"
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
+    # url(r'^', include(router.urls)),
+    # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^',include('webPage.urls'))
 
 ]

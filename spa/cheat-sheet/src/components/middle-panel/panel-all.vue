@@ -20,5 +20,6 @@ export default {
 section{
   width: 250px;
   height: 100%;
+  border-right: 5px solid rgb(164, 164, 164);
 }
 </style>

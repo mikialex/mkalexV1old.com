@@ -23,7 +23,8 @@ section{
   overflow-y: scroll;
   display: flex;flex-direction: column;
   align-items: center;
-  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
   >main{
     width: 100%;
     margin:30px;

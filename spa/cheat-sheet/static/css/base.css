@@ -5,3 +5,9 @@ body{
 html{
   font-size: 16px;
 }
+
+
+::selection{
+  background-color:rgb(49, 69, 75);
+  color:#fff;
+}
