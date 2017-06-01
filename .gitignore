@@ -12,6 +12,6 @@ mkalex/webPage/static/image/blog
 *.pyc
 *.map
 
-mkalex/mkalex/settings.py
-
 ENV3.6
+
+mkalex/mkalex/deploy.py
