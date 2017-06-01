@@ -169,6 +169,14 @@ def about(request):
     return HttpResponse(template.render(content))
 
 
+def theone(request):
+    template=loader.get_template('webPage/theone.jinja')
+    content={
+        # 'page_title':'Meta',
+        # 'right_col_data':get_right_col(),
+    }
+    return HttpResponse(template.render(content))
+
 
 def page_not_found(request):
     template=loader.get_template('webPage/404.jinja')

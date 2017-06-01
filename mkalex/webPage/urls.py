@@ -15,4 +15,7 @@ urlpatterns = [
     url(r'^colleciton$', views.collection, name='collection'),
     url(r'^cheetSheet$', views.cheetSheet, name='cheetSheet'),
     url(r'^about$', views.about, name='about'),
+
+
+    url(r'^caicai$', views.theone, name='theone'), 
 ]

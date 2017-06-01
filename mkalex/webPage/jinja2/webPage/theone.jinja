@@ -1,0 +1,44 @@
+{% extends "webPage/layout/clean.jinja" %}
+
+
+{% block content %}
+    <div class="mk-heart">
+
+      <embed src="{{ static('/image/commen/heart.svg') }}" >
+        <div class="">
+
+        <span id="days" style="margin-right:15px;">..</span> <span>days</span>
+        </div>
+    </div>
+
+    <script language="JavaScript">
+    // 计算两个日期的间隔天数
+    function Computation(){
+      var sDate1=new Date()
+      var sDate2=new Date()
+      sDate2.setFullYear(2017)
+      sDate2.setMonth(2)
+      sDate2.setDate(16)
+      console.log(sDate1)
+      console.log(sDate2)
+      iDays = parseInt(Math.abs(sDate1.getTime() - sDate2.getTime()) / 1000 / 60 / 60 /24)+1;   //把相差的毫秒数转换为天数
+       //alert(iDays);
+      document.getElementById("days").innerText=iDays
+    }
+
+    function datecom(){
+      Computation()
+      setInterval(Computation,10000)
+    }
+
+    window.onload=datecom();
+    </script>
+
+    <style media="screen">
+      body{
+        background: #f9f6f6;
+      }
+    </style>
+
+
+{% endblock %}
