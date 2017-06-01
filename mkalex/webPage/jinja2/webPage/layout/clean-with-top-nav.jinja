@@ -10,13 +10,7 @@
             {% include "webPage/include/nav_main.jinja" %}
             {% include "webPage/include/title_main.jinja" %}
 
-            <div class="mk-container">
-              <div class="mk-main-layout">
-                <div class="mk-main-content" >
-                    {% block content %}{% endblock %}
-                </div>
-                </div>
-            </div>
+            {% block content %}{% endblock %}
         </div>
         {% include "webPage/include/footerA.jinja" %}
     </body>

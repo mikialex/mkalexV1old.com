@@ -5,7 +5,28 @@
 
 {% block content %}
 
-{% include "webPage/include/underConstruction.jinja" %}
+<div class="" style="width:100%;height:50px">
+
+</div>
+
+
+<div class="mk-container">
+  <div class="mk-portfolio-container">
+    {% for i in [1,1,1,1,1] %}
+    <div class="mk-portfolio-block">
+      <div class="mk-p-b-thumb">
+        <img src="" alt="">
+      </div>
+      <h3>必乾信息科技企业CIS设计V1</h3>
+      <div class="mk-p-b-info">
+        <span>viewd:123</span>
+        <span>created:2016-1-1</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
 
 
 {% endblock %}
