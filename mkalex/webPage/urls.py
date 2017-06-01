@@ -11,11 +11,12 @@ urlpatterns = [
     url(r'^blog/category/(?P<category_id>[0-9]+)/$', views.blog_category_archive, name='blog_category_archive'),
     url(r'^blog/detail/(?P<name>[^/]+)/$', views.blog_detail, name='blog_detail'),
     url(r'^portfolio$', views.portfolio, name='portfolio'),
+    url(r'^portfolio/detail/(?P<name>[^/]+)/$', views.portfolio_detail, name='portfolio_detail'),
     url(r'^archive$', views.archive, name='archive'),
     url(r'^colleciton$', views.collection, name='collection'),
     url(r'^cheetSheet$', views.cheetSheet, name='cheetSheet'),
     url(r'^about$', views.about, name='about'),
 
 
-    url(r'^caicai$', views.theone, name='theone'), 
+    url(r'^caicai$', views.theone, name='theone'),
 ]

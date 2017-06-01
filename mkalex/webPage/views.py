@@ -9,7 +9,7 @@ from django.core.paginator import Paginator ,EmptyPage,PageNotAnInteger
 from django.http import HttpResponse ,Http404
 from django.template import loader
 
-from .models import Article,Recommended_article,Category
+from .models import Article,Recommended_article,Category,Portfolio
 
 from markdown2 import Markdown
 markdowner = Markdown()
@@ -124,12 +124,31 @@ def blog_category_archive(request,category_id):
 
 
 def portfolio(request):
+    portfolio_list = Portfolio.objects.all()
     template=loader.get_template('webPage/pages/portfolio/portfolio-page.jinja')
     content={
         'page_title':'Portfolio',
+        'list':portfolio_list,
         'right_col_data':get_right_col(),
     }
     return HttpResponse(template.render(content))
+
+def portfolio_detail(request,name):
+    template=loader.get_template('webPage/pages/portfolio/portfolio-detail.jinja')
+    portfolio = get_object_or_404(Portfolio,url_name=name)
+    pv=portfolio.page_view+1;
+    Portfolio.objects.filter(url_name=name).update(page_view=pv)
+    content_html=markdowner.convert(set_url(portfolio.content,portfolio.url_name))
+    content={
+        'page_title':portfolio.name,
+        'page_subtitle':portfolio.describe,
+        'content':content_html,
+        'right_col_data':get_right_col(),
+    }
+    return HttpResponse(template.render(content))
+
+
+
 
 
 def archive(request):

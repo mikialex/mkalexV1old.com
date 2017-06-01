@@ -12,7 +12,23 @@
 
 <div class="mk-container">
   <div class="mk-portfolio-container">
-    {% for i in [1,1,1,1,1] %}
+
+    {% for item in list %}
+    <div class="mk-portfolio-block">
+      <div class="mk-p-b-thumb"
+      onclick="window.location.href='{{ url('webPage:portfolio_detail', kwargs={'name': item.url_name}) }}'">
+        <img src="" alt="">
+      </div>
+      <h3>{{ item.name }}</h3>
+      <div class="mk-p-b-info">
+        <span>viewd:{{ item.page_view }}</span>
+        <span>created:{{item.publish_time|datetime}}</span>
+      </div>
+    </div>
+    {% endfor %}
+
+
+    <!-- {% for i in [1,1,1,1,1] %}
     <div class="mk-portfolio-block">
       <div class="mk-p-b-thumb">
         <img src="" alt="">
@@ -23,7 +39,10 @@
         <span>created:2016-1-1</span>
       </div>
     </div>
-    {% endfor %}
+    {% endfor %} -->
+
+
+
   </div>
 </div>
 

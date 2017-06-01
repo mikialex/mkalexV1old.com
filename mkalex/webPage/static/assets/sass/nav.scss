@@ -61,6 +61,19 @@
             >.under-construction{
                 color:rgb(182, 182, 182) !important;
             }
+            >.outer-link{
+              &::after{
+                  width: 0;
+                  height: 0;
+                  border-style: solid;
+                  border-width: 0 10px 10px 0;
+                  border-color: transparent #b0b0b0 transparent transparent;
+                  display: block;
+                  float:right;
+                  content: ' ';
+                  position: relative;left:rem(15px);
+              }
+            }
         }
     }
     >div{
