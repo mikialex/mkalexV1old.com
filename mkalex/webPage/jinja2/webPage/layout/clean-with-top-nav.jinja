@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+{% include "webPage/include/head.jinja" %}
+    <body>
+        {% include "webPage/include/responsive.jinja" %}
+        <div class="mk-page">
+
+                {% block banner %}{% endblock %}
+
+            {% include "webPage/include/nav_main.jinja" %}
+            {% include "webPage/include/title_main.jinja" %}
+
+            <div class="mk-container">
+              <div class="mk-main-layout">
+                <div class="mk-main-content" >
+                    {% block content %}{% endblock %}
+                </div>
+                </div>
+            </div>
+        </div>
+        {% include "webPage/include/footerA.jinja" %}
+    </body>
+</html>

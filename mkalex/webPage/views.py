@@ -46,7 +46,7 @@ def get_right_col():
 
 
 def index(request):
-    template=loader.get_template('webPage/index.jinja')
+    template=loader.get_template('webPage/pages/index.jinja')
     content ={
         'page_title':'Index',
         'right_col_data':get_right_col(),
@@ -58,7 +58,7 @@ def index(request):
 
 #blog home page
 def blog(request):
-    template=loader.get_template('webPage/blog_list.jinja')
+    template=loader.get_template('webPage/pages/blog/blog_list.jinja')
     article_list = Article.objects.all()
     page = request.GET.get('page')  # 获取页码
     paginator = Paginator(article_list, 6)  # 实例化一个分页对象
@@ -78,7 +78,7 @@ def blog(request):
 
 
 def blog_detail(request,name):
-    template=loader.get_template('webPage/blog_detail.jinja')
+    template=loader.get_template('webPage/pages/blog/blog_detail.jinja')
     article = get_object_or_404(Article,url_name=name)
     pv=article.page_view+1;
     Article.objects.filter(url_name=name).update(page_view=pv)
@@ -95,7 +95,7 @@ def blog_detail(request,name):
 
 
 def blog_year_archive(request,year):
-    template=loader.get_template('webPage/blog_list_without_pagination.jinja')
+    template=loader.get_template('webPage/pages/blog/blog_list_without_pagination.jinja')
     article_list = Article.objects.filter(publish_time__year=year)
     content={
         'page_title':'Blog in '+year,
@@ -108,7 +108,7 @@ def blog_year_archive(request,year):
 
 
 def blog_category_archive(request,category_id):
-    template=loader.get_template('webPage/blog_list_without_pagination.jinja')
+    template=loader.get_template('webPage/pages/blog/blog_list_without_pagination.jinja')
     article_list = Article.objects.filter(category_id=category_id)
     category_name=get_object_or_404(Category,id=category_id).name
     content={
@@ -124,7 +124,7 @@ def blog_category_archive(request,category_id):
 
 
 def portfolio(request):
-    template=loader.get_template('webPage/portfolio.jinja')
+    template=loader.get_template('webPage/pages/portfolio/portfolio-page.jinja')
     content={
         'page_title':'Portfolio',
         'right_col_data':get_right_col(),
@@ -151,7 +151,7 @@ def cheetSheet(request):
 
 
 def collection(request):
-    template=loader.get_template('webPage/collection.jinja')
+    template=loader.get_template('webPage/pages/collection.jinja')
     content={
         'page_title':'Collection',
         'right_col_data':get_right_col(),
@@ -161,7 +161,7 @@ def collection(request):
 
 
 def about(request):
-    template=loader.get_template('webPage/about.jinja')
+    template=loader.get_template('webPage/pages/about.jinja')
     content={
         'page_title':'Meta',
         'right_col_data':get_right_col(),
@@ -170,7 +170,7 @@ def about(request):
 
 
 def theone(request):
-    template=loader.get_template('webPage/theone.jinja')
+    template=loader.get_template('webPage/pages/theone.jinja')
     content={
         # 'page_title':'Meta',
         # 'right_col_data':get_right_col(),
@@ -179,9 +179,9 @@ def theone(request):
 
 
 def page_not_found(request):
-    template=loader.get_template('webPage/404.jinja')
+    template=loader.get_template('webPage/pages/error-page/404.jinja')
     return HttpResponse(template.render())
 
 def page_error(request):
-    template=loader.get_template('webPage/500.jinja')
+    template=loader.get_template('webPage/pages/error-page/500.jinja')
     return HttpResponse(template.render())
