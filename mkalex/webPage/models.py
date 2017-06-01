@@ -41,6 +41,30 @@ class Article(models.Model):
         ordering=['-publish_time']
 
 
+class Portfolio(models.Model):
+    # url_name=models.CharField(max_length=100,unique=True)
+    url_name=models.CharField(max_length=100,unique=True)
+
+    name =models.CharField(max_length=100)  #题目
+    describe =models.CharField(max_length=100,blank=True)  #副标题
+
+    publish_time=models.DateTimeField() #发布日期
+
+    content_type=models.CharField(max_length=20) #文档类型
+    content=models.TextField(blank=True)#文档内容
+
+    page_view=models.IntegerField(default=0)#访客计数
+    has_cover=models.BooleanField(default=True)#是否有封面，封面文件应当位于blog对应文件名下cover.png
+
+    def __unicode__(self):
+        return self.name
+
+    class Meta:#时间下降排序
+        ordering=['-publish_time']
+
+
+
+
 # class Article_Tag(models.Model):
 #     article=models.ForeignKey(Person, on_delete=models.CASCADE)
 #     tag=models.ForeignKey(Tag,on_delete=models.CASCADE)

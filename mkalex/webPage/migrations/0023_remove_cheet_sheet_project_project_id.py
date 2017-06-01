@@ -11,9 +11,9 @@ class Migration(migrations.Migration):
         ('webPage', '0022_auto_20170505_0416'),
     ]
 
-    operations = [
-        migrations.RemoveField(
-            model_name='cheet_sheet_project',
-            name='project_id',
-        ),
-    ]
+    # operations = [
+    #     migrations.RemoveField(
+    #         model_name='cheet_sheet_project',
+    #         name='project_id',
+    #     ),
+    # ]
