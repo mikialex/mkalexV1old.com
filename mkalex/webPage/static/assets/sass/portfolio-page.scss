@@ -1,0 +1,47 @@
+.mk-portfolio-box{
+    padding-left: rem(10px);
+    padding-right: rem(30px);
+    @media(max-width:1000px){
+        padding-right: rem(10px);
+    }
+    img{
+      display: block;
+        max-width:100%;
+        margin:auto;
+        border-radius: rem(5px);
+    }
+
+    color:rgb(73, 73, 73);
+    font-size: rem(16px);
+    font-weight: 300;
+
+    h1, h2, h3, h4 ,h5 ,h6{
+        font-weight: 400;
+    }
+
+    a{
+        color:rgb(223, 49, 49);
+        transition: 0.2s ease-out;
+        &:visited{
+            color:rgb(170, 31, 31)
+        }
+        &:hover{
+            color:rgb(255, 56, 56);
+        }
+        &:active{
+            color: rgb(38, 28, 28);
+        }
+    }
+
+    p{
+        line-height: 1.618;
+        margin-top: rem(30px);
+        margin-bottom: rem(30px);
+        font-size: rem(16px);
+        text-align: justify;
+    }
+
+    hr{
+        border:1px solid rgb(238, 238, 238);
+    }
+}

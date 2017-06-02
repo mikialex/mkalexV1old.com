@@ -147,7 +147,7 @@ if deploy.isDeveloping :#in development
     DATABASES['default']['PASSWORD']=deploy.devPassword
     STATIC_ROOT = os.path.join(BASE_DIR,'static').replace('\\','/')
 else:#in production
-    DATABASES['default']['PASSWORD']=deploy.devPassword
+    DATABASES['default']['PASSWORD']=deploy.productionPassword
     STATICFILES_DIRS = (
       os.path.join(BASE_DIR, 'static'),
     )

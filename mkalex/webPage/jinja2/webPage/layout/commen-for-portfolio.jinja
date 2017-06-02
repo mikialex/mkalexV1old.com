@@ -8,10 +8,10 @@
             {% include "webPage/include/nav_main.jinja" %}
             {% include "webPage/include/blog_title.jinja" %}
 
-            <div class="mk-container" style="flex-direction:column">
-
+            <div class="mk-container">
+              <div class="mk-portfolio-box">
                   {% block content %}{% endblock %}
-
+              </div>
             </div>
         </div>
         {% include "webPage/include/footerA.jinja" %}

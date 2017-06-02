@@ -14,9 +14,13 @@ from .models import Article,Recommended_article,Category,Portfolio
 from markdown2 import Markdown
 markdowner = Markdown()
 blog_assets_base='/static/image/blog/'
+portfolio_assets_base='/static/image/portfolio/'
 
-def set_url(markdown_text,url_name):
-    return markdown_text.replace("{#base#}",blog_assets_base+url_name+'/')
+def set_url(type,markdown_text,url_name):
+    if type=='blog':
+        return markdown_text.replace("{#base#}",blog_assets_base+url_name+'/')
+    else :
+        return markdown_text.replace("{#base#}",portfolio_assets_base+url_name+'/')
 
 def get_right_col():
 
@@ -82,7 +86,7 @@ def blog_detail(request,name):
     article = get_object_or_404(Article,url_name=name)
     pv=article.page_view+1;
     Article.objects.filter(url_name=name).update(page_view=pv)
-    content_html=markdowner.convert(set_url(article.content,article.url_name))
+    content_html=markdowner.convert(set_url('blog',article.content,article.url_name))
     content={
         'page_title':article.title,
         'page_subtitle':article.sub_title,
@@ -138,7 +142,7 @@ def portfolio_detail(request,name):
     portfolio = get_object_or_404(Portfolio,url_name=name)
     pv=portfolio.page_view+1;
     Portfolio.objects.filter(url_name=name).update(page_view=pv)
-    content_html=markdowner.convert(set_url(portfolio.content,portfolio.url_name))
+    content_html=markdowner.convert(set_url('portfolio',portfolio.content,portfolio.url_name))
     content={
         'page_title':portfolio.name,
         'page_subtitle':portfolio.describe,

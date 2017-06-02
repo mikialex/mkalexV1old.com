@@ -17,7 +17,11 @@
     <div class="mk-portfolio-block">
       <div class="mk-p-b-thumb"
       onclick="window.location.href='{{ url('webPage:portfolio_detail', kwargs={'name': item.url_name}) }}'">
-        <img src="" alt="">
+        {%if item.has_cover%}
+          <img src="{{static("/image/portfolio/"+item.url_name+"/"+"cover.png")}}" alt="" draggable="false">
+        {%else%}
+          <img src="{{static("/image/commen/defaultPortfolioCover.png")}}" alt="" draggable="false">
+        {%endif%}
       </div>
       <h3>{{ item.name }}</h3>
       <div class="mk-p-b-info">
