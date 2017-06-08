@@ -1,6 +1,8 @@
 from django.conf.urls import url,include
 
 from . import views
+from .dependentpages import footerpages
+
 
 
 app_name="webPage"#namespacing url names   used in tempalte url()
@@ -19,4 +21,9 @@ urlpatterns = [
 
 
     url(r'^caicai$', views.theone, name='theone'),
+
+    url(r'^contact$',footerpages.contact,name='contact'),
+    url(r'^friends$',footerpages.friendsIknow,name='friends'),
+    
+    url(r'^copyright$',footerpages.copyright,name='copyright')
 ]
