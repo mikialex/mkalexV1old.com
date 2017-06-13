@@ -18,7 +18,7 @@ connection.connect();
 let isPortOver=false;
 let isPostOver=false;
 function checkIsOver(){
-    if(isPortOver&&isPostOver){process.exit()}
+    if(isPortOver&&isPostOver){process.exit(0)}
 }
 let portfolios;
 let articles;

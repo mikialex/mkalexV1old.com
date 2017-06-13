@@ -1,9 +1,14 @@
-var http = require('https');
+var https = require('https');
 var cheerio = require('cheerio');
 
 var url = 'https://www.behance.net/gallery/53248723/SUOL-2017';
 
-http.get(url, function(response) {
+console.log(process.argv[2])
+if(process.argv[2]!==undefined){
+    url=process.argv[2]
+}
+
+https.get(url, function(response) {
 
     var body = '';
 
