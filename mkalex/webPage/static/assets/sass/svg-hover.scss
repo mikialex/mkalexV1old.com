@@ -1,10 +1,11 @@
 
 .main-logo-svg-mask{
     >polygon{
-      transition: 0.1s cubic-bezier(0, 0.74, 0, 0.93);
+      transition: 3s cubic-bezier(0.74, 0.09, 0.87, 0.57);
       fill-opacity:0;
       &:hover{
         // fill:#fff;
+        transition: 0s;
         fill-opacity:1;
       }
     }
