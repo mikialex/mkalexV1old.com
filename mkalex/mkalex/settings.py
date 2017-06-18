@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'rest_framework',#restful
     # 'rest_framework.authtoken',
-    'bootstrap_admin',  #一定要放在`django.contrib.admin`前面
+    # 'bootstrap_admin',  #一定要放在`django.contrib.admin`前面
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
