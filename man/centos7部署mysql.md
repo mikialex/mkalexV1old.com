@@ -36,7 +36,7 @@ http://putian.blog.51cto.com/1722818/1287959
 添加远程登录权限
 ```
 mysql -u root -p #登录
-
+      use mysql
 mysql> select host,user from user; #查看用户的权限情况
 mysql> Grant all privileges on *.* to 'root'@'%' identified by 'password' with grant option;
 #(%表示是所有的外部机器，如果指定某一台机，就将%改为相应的机器名；‘root’则是指要使用的用户名，里面的password需要自己修改成root的密码)
